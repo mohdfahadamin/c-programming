@@ -48,7 +48,6 @@ void enqueue()
     }
     else
     {
-
         printf("Enter element to enqueue: ");
         scanf("%d", &item);
         if (front == -1)
@@ -79,7 +78,7 @@ void dequeue()
         {
             y = queue[front];
             front = front + 1;
-                }
+        }
     }
 }
 

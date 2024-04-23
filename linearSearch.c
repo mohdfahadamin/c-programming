@@ -15,11 +15,17 @@ void main()
     {
         if (k == A[i])
         {
-            printf("%d is found at position %d\n", k, i + 1);
-            flag++;
+            // printf("%d is found at position %d\n", k, i + 1);
+            // flag++;
+            flag = 1;
+            break;
         }
     }
-    if (flag == 0)
+    if (flag == 1)
+    {
+        printf("%d is found at position %d\n", k, i + 1);
+    }
+    else
     {
         printf("%d is not found\n", k);
     }

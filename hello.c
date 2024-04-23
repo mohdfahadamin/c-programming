@@ -1,28 +1,23 @@
-#include <stdio.h>
-void main()
+for (i = 0; i < n; i++)
 {
-    int n = 5, t, key, a[n];
-    printf("enter the element: ");
-    for (int i = 0; i < 5; i++)
+    key = a[i];
+    j = i - 1;
+    while (j >= 0 && j > key)
     {
-        scanf("%d", &a[i]);
+        a[j + 1] = a[j];
+        j--;
     }
+    a[j + 1] = key;
+}
 
-    for (int i = 1; i < n; i++)
+for (i = 0; i < n; i++)
+{
+    key = a[i];
+    j = i - 1;
+    while (j >= 0 && a[j] > key)
     {
-        key = a[i];
-        int j = i - 1;
-
-        while (j >= 0 && a[j] > key)
-        {
-            a[j + 1] = a[j];
-            j = j - 1;
-        }
-        a[j + 1] = key;
+        a[j + 1] = a[j];
+        j--;
     }
-
-    for (int i = 0; i < n; i++)
-    {
-        printf("%d", a[i]);
-    }
+    a[j + 1] = key;
 }
